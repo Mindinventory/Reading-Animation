@@ -8,31 +8,25 @@
 import UIKit
 
 final class ReadingCell: UICollectionViewCell {
-    
+
     @IBOutlet weak var vwNumber: UIView!
     @IBOutlet weak var lblPage: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
 }
 
-//MARK:- Configure
-//MARK:-
+// MARK: - Configure -
 extension ReadingCell {
-    
+
     func configureCell(page: Int) {
-        
+
         lblPage.text = "\(page)"
         lblPage.layer.cornerRadius = 0
         lblPage.layer.masksToBounds = true
         lblPage.backgroundColor = .clear
         lblPage.textColor = .black
     }
-    
+
     func configureSelectedCell(page: Int) {
-        
+
         self.layoutIfNeeded()
         lblPage.text = "\(page)"
         lblPage.layer.cornerRadius = lblPage.frame.width / 2

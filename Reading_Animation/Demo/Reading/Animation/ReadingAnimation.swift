@@ -8,38 +8,34 @@
 import UIKit
 
 extension ReadingVC {
-    
-    func animateViews(btnBack: UIButton, lblReading: UILabel, lblReadingDetails: UILabel, constBtnBackTop: NSLayoutConstraint, constImgReadingCenterX: NSLayoutConstraint, vcView: UIView, collReading: CollReading, readingData: [ReadingPage]) {
-        
+
+    func animateViews(btnBack: UIButton, lbls: (lblReading: UILabel, lblReadingDetails: UILabel),
+                      constraint: (btnBackTop: NSLayoutConstraint, imgReadingCenterX: NSLayoutConstraint),
+                      vcView: UIView, coll: (collReading: CollReading, readingData: [ReadingPage])) {
+
         UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseInOut, animations: {
-            
+
             btnBack.setAlphaValue(alpha: 1.0)
-            lblReading.setAlphaValue(alpha: 1.0)
-            lblReadingDetails.setAlphaValue(alpha: 1.0)
-            
-            constBtnBackTop.constant = 11
-            
+            lbls.lblReading.setAlphaValue(alpha: 1.0)
+            lbls.lblReadingDetails.setAlphaValue(alpha: 1.0)
+            constraint.btnBackTop.constant = 11
+
             CMainThread.asyncAfter(deadline: .now() + 0.3, execute: {
-                
-                self.animateImageAndCollectionView(constImgReadingCenterX: constImgReadingCenterX, vcView: vcView)
-                
-                collReading.readingPageData = readingData
-                collReading.reloadData()
+
+                self.animateImageAndCollectionView(constImgReadingCenterX: constraint.imgReadingCenterX, vcView: vcView)
+                coll.collReading.readingPageData = coll.readingData
+                coll.collReading.reloadData()
             })
-            
             vcView.layoutIfNeeded()
-            
         }, completion: nil)
     }
-    
+
     private func animateImageAndCollectionView(constImgReadingCenterX: NSLayoutConstraint, vcView: UIView) {
-        
+
         UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseInOut, animations: {
-            
+
             constImgReadingCenterX.constant = 0
-            
             vcView.layoutIfNeeded()
-            
         }, completion: nil)
     }
 }
