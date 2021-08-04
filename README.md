@@ -18,35 +18,33 @@
  
 ## Table of content :-
 
-- [Description](#description)
-- [How to add in your project](#how-to-add-in-your-project)
-- [Requirement](#requirement)
-- [License](#license)
+1.  [Description](#description)
+2.  [How to add in your project](#how-to-add-in-your-project)
+3.  [Requirement](#requirement)
+4.  [License](#license)
  
 ## Description
 Reading animation allows you to click on different page number and accrodingly it will animate page changes in a cool way. It has very attractive ui and is very easy to use.
 
-- <b>Animation used</b>
+<b>Animation used</b>
 
-1. ```UIView.animate(withDuration: , delay: , options: .curveEaseInOut, animations: , completion: )```
-2. ```CGAffineTransform(scaleX: , y: )```
-3. ```CGAffineTransform(translationX: , y: )```
-4. ```UIView.transition(with: , duration: , options: .transitionCurlUp, animations: , completion: )```
-
+1.  ```UIView.animate(withDuration: , delay: , options: .curveEaseInOut, animations: , completion: )```
+2.  ```CGAffineTransform(scaleX: , y: )```
+3.  ```CGAffineTransform(translationX: , y: )```
+4.  ```UIView.transition(with: , duration: , options: .transitionCurlUp, animations: , completion: )```
 
 ## How to add in your project
 
-1. Clone or download the repo
-2. After it, drag and drop all files to your project
-3. Run your project and see the animation
+1.  Clone or download the repo
+2.  After it, drag and drop all files to your project
+3.  Run your project and see the animation
 
 ## Requirement
 
-- Xcode 12 or later
-- Supports iOS 13 or later
-- Supports iPhone SE 1st Generation or later
+1.  Xcode 12 or later
+2.  Supports iOS 13 or later
+3.  Supports iPhone SE 1st Generation or later
 
-## LICENSE!
+## LICENSE
 
 Reading Animation is [MIT-licensed](/LICENSE).
-
