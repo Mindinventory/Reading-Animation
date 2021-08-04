@@ -25,7 +25,6 @@ enum HomeSelection: String {
     case settings = "Settings"
 }
 
-
 // MARK: - Reading -
 struct ReadingPage {
     let page: Int
