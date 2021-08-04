@@ -25,7 +25,7 @@
 4.  [License](#license)
  
 ## Description
-Reading animation allows you to click on different page number and accrodingly it will animate page changes in a cool way. It has very attractive ui and is very easy to use.
+Reading animation allows you to click on the different page numbers and accordingly it will animate page changes in a cool way. It has a very attractive UI and is very easy to use.
 
 <b>Animation used</b>
 
